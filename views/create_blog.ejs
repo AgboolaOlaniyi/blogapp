@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.btn{
+  background-color: green;
+}
+</style>
+          <h1>Create New Post</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <form action="/blogs/create" method="POST">
+        <div class="control-group">
+          <div class="form-group floating-label-form-group controls">
+            <label>Title</label>
+            <input type="text" name="title" placeholder="Title" class="form-control" required>
+          </div>
+        </div>
+        <br>
+        <div class="control-group">
+          <div class="form-group floating-label-form-group controls">
+            <label>Description</label>
+            <input type="text" name="description" placeholder="Description" class="form-control" required>
+          </div>
+        </div>
+        <br>
+        <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>author</label>
+              <input type="text" name="author" placeholder=" " class="form-control" required>
+            </div>
+          </div>
+            <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+            </div>
+          </div>
+          <br>
+                  <br>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>tags</label>
+              <input type="text" name="tags" placeholder="tags" class="form-control" required>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+               <label>body</label>
+               <textarea name="body" placeholder="body" cols="20" rows="5" class="form-control" required></textarea>
+          </div>
+          </div>
+          <br>
+             <div class="form-group my-4 text-center">
+          <button class="btn" >Create Post</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

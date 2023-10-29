@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <header> <%- include("partials/header1.ejs") %></header>
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+  <%if(user){%>
+    <h1 class="wel">
+      You are Welcome <span class="use">
+        <%= user.email %>
+      </span>
+    </h1>
+
+    <ul style="background-color: white;"> 
+       <%blogInfos.forEach(blog=>{%>
+        <li>
+          <h2>
+            <%= blog.tag %>
+          </h2>
+          <h1>
+            <%= blog.title %>
+          </h1>
+          <p>
+            <%= blog.body %>
+          </p>
+          <p>
+            <%= blog.description %>
+          </p>
+          <p>
+            <%= blog.state %>
+          </p>
+          <p>drafted by <%= blog.author %> on <%= blog.drafted_time %>
+          </p>
+        </li>
+        <% }) %>
+   </ul>
+
+    <% }else { %>
+      <a href="/login">Login</a>
+      <% } %>  
+</body>
+
+
+</html>

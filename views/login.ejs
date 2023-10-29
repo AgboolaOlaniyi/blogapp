@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<header>
+  <%- include("partials/header3.ejs") %>
+  <script>
+   function validateForm() {
+      var un = document.querySelector('#email').value;
+      var pw = document.querySelector('#password').value;
+      var username = "username";
+      var password = "password";
+      if ((un == username) && (pw == password)) {
+        alert('You are successfully logged in');
+      } else {
+        alert("Login was unsuccessful, please check your username and password");
+        return false;
+      }
+    }
+
+    
+  </script>
+</header>
+  <style>
+    p{
+      font-style: italic;
+      
+    }
+    
+    .submit{
+      background-color: #3c913c;
+      border-radius: 8px 8px 8px 8px;
+      color: white;
+      width: 150px
+    ;  }
+    .topic{
+      color: #3c913c;
+      text-align: center;
+    }
+
+    form { 
+margin: 0 auto; 
+width: 200px;
+margin-top: 150px;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.button {border-radius: 50%;}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
+  </style>
+
+  <body>
+
+
+ 
+
+
+  <div class="cen">
+  <form  action="users/login" , onSubmit="return validateForm()", method="post">
+    <h1 class="topic">Login</h1>
+    <label for="email" class="label"
+      >Email<br>
+      <input type="text" , name="email" class="input" required /> </label
+    ><br /><br /><br />
+    <label for="password" class="label"
+      >Password <br>      <input type="password" , name="password" class="input" required/> </label
+    ><br /><br /><br />
+    <span class="psw">Forgot <a href="#">password?</a></span>
+    <button type="submit" class="submit">Login</button>
+  </form>
+  </div>
+<p class="topic">Already a User? if No, Please SignUp</p>
+
+<footer> <%- include("partials/footer.ejs") %></footer>  
+</body>
+
+</html>
